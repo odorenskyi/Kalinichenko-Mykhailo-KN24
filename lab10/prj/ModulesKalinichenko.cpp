@@ -1,4 +1,4 @@
-#include <fstream>
+ï»¿#include <fstream>
 #include <iostream>
 #include <ctime>
 #include <string>
@@ -26,7 +26,7 @@ int CountCharactersInFile(ifstream& file) {
 
 bool isContainsWord(ifstream& file, const string& target) {
     if (!file.is_open()) {
-        cout << "Íå âäàëîñÿ â³äêðèòè ôàéë";
+        cout << "ÐÐµ Ð²Ð´Ð°Ð»Ð¾ÑÑ Ð²Ñ–Ð´ÐºÑ€Ð¸Ñ‚Ð¸ Ñ„Ð°Ð¹Ð»";
         return false;
     }
 
@@ -62,25 +62,25 @@ void task10_1()
 
     if (!outfile.is_open()) return;
 
-    outfile << "Çâ³ò: ëàáîðàòîðíà ðîáîòà" << endl;
-    outfile << "Ï²Á/ãðóïà: Êàë³í³÷åíêî Ìèõàéëî KN-24" << endl;
-    outfile << "Âàð³àíò: ³íäèâ³äóàëüíèé" << endl;
-    outfile << "Òåìà: ôàéëè" << endl;
-    outfile << "Ð³ê âèêîíàííÿ: 2025" << "\n\n";
-    outfile << "Ó öüîìó ôàéë³ " << to_string(CountCharactersInFile(infile)) << " ñèìâîë³â." << endl;
+    outfile << "Ð—Ð²Ñ–Ñ‚: Ð»Ð°Ð±Ð¾Ñ€Ð°Ñ‚Ð¾Ñ€Ð½Ð° Ñ€Ð¾Ð±Ð¾Ñ‚Ð°" << endl;
+    outfile << "ÐŸÐ†Ð‘/Ð³Ñ€ÑƒÐ¿Ð°: ÐšÐ°Ð»Ñ–Ð½Ñ–Ñ‡ÐµÐ½ÐºÐ¾ ÐœÐ¸Ñ…Ð°Ð¹Ð»Ð¾ KN-24" << endl;
+    outfile << "Ð’Ð°Ñ€Ñ–Ð°Ð½Ñ‚: Ñ–Ð½Ð´Ð¸Ð²Ñ–Ð´ÑƒÐ°Ð»ÑŒÐ½Ð¸Ð¹" << endl;
+    outfile << "Ð¢ÐµÐ¼Ð°: Ñ„Ð°Ð¹Ð»Ð¸" << endl;
+    outfile << "Ð Ñ–Ðº Ð²Ð¸ÐºÐ¾Ð½Ð°Ð½Ð½Ñ: 2025" << "\n\n";
+    outfile << "Ð£ Ñ†ÑŒÐ¾Ð¼Ñƒ Ñ„Ð°Ð¹Ð»Ñ– " << to_string(CountCharactersInFile(infile)) << " ÑÐ¸Ð¼Ð²Ð¾Ð»Ñ–Ð²." << endl;
 
-    // Ïåðåâ³ðêà íàÿâíîñò³ ñë³â ó ôàéë³
-    string targetwords[] = { "ôàéë", "ðîáîòà", "çàâäàííÿ", "³íäèâ³äóàëüíèé"};
+    // ÐŸÐµÑ€ÐµÐ²Ñ–Ñ€ÐºÐ° Ð½Ð°ÑÐ²Ð½Ð¾ÑÑ‚Ñ– ÑÐ»Ñ–Ð² Ñƒ Ñ„Ð°Ð¹Ð»Ñ–
+    string targetwords[] = { "Ñ„Ð°Ð¹Ð»", "Ñ€Ð¾Ð±Ð¾Ñ‚Ð°", "Ð·Ð°Ð²Ð´Ð°Ð½Ð½Ñ", "Ñ–Ð½Ð´Ð¸Ð²Ñ–Ð´ÑƒÐ°Ð»ÑŒÐ½Ð¸Ð¹"};
     for (const string& word : targetwords) {
         bool found = isContainsWord(infile, word);
         if (found) {
-            outfile << "Ñëîâî \"" << word << "\" º ó ôàéë³." << endl;
+            outfile << "Ð¡Ð»Ð¾Ð²Ð¾ \"" << word << "\" Ñ” Ñƒ Ñ„Ð°Ð¹Ð»Ñ–." << endl;
         } else {
-            outfile << "Ñëîâà \"" << word << "\" íåìàº ó ôàéë³." << endl;
+            outfile << "Ð¡Ð»Ð¾Ð²Ð° \"" << word << "\" Ð½ÐµÐ¼Ð°Ñ” Ñƒ Ñ„Ð°Ð¹Ð»Ñ–." << endl;
         }
     }
 
-    cout << "Çâ³ò áóëî çàïèñàíî ó ôàéë output.txt\n\n";
+    cout << "Ð—Ð²Ñ–Ñ‚ Ð±ÑƒÐ»Ð¾ Ð·Ð°Ð¿Ð¸ÑÐ°Ð½Ð¾ Ñƒ Ñ„Ð°Ð¹Ð» output.txt\n\n";
 }
 
 void task10_2()
@@ -88,21 +88,21 @@ void task10_2()
     ofstream file("input.txt", ios::app);
 
     if (file.is_open()) {
-        file << "Çàâäàííÿ 10.2\n";
+        file << "Ð—Ð°Ð²Ð´Ð°Ð½Ð½Ñ 10.2\n";
 
-        // Äîäàºìî äîâ³ëüíèé òåêñò
-        file << "Äîäàºìî äîâ³ëüíèé òåêñò ó ôàéë äëÿ ïåðåâ³ðêè 20 ñèìâîë³â:\n";
-        file << "- ïåðøèé ðÿäîê\n";
-        file << "- äðóãèé ðÿäîê\n";
-        file << "- òðåò³é ðÿäîê\n";
+        // Ð”Ð¾Ð´Ð°Ñ”Ð¼Ð¾ Ð´Ð¾Ð²Ñ–Ð»ÑŒÐ½Ð¸Ð¹ Ñ‚ÐµÐºÑÑ‚
+        file << "Ð”Ð¾Ð´Ð°Ñ”Ð¼Ð¾ Ð´Ð¾Ð²Ñ–Ð»ÑŒÐ½Ð¸Ð¹ Ñ‚ÐµÐºÑÑ‚ Ñƒ Ñ„Ð°Ð¹Ð» Ð´Ð»Ñ Ð¿ÐµÑ€ÐµÐ²Ñ–Ñ€ÐºÐ¸ 20 ÑÐ¸Ð¼Ð²Ð¾Ð»Ñ–Ð²:\n";
+        file << "- Ð¿ÐµÑ€ÑˆÐ¸Ð¹ Ñ€ÑÐ´Ð¾Ðº\n";
+        file << "- Ð´Ñ€ÑƒÐ³Ð¸Ð¹ Ñ€ÑÐ´Ð¾Ðº\n";
+        file << "- Ñ‚Ñ€ÐµÑ‚Ñ–Ð¹ Ñ€ÑÐ´Ð¾Ðº\n";
 
-        // Äîäàºìî ïîòî÷íó äàòó ³ ÷àñ
+        // Ð”Ð¾Ð´Ð°Ñ”Ð¼Ð¾ Ð¿Ð¾Ñ‚Ð¾Ñ‡Ð½Ñƒ Ð´Ð°Ñ‚Ñƒ Ñ– Ñ‡Ð°Ñ
         time_t now = time(0);
         char* dt = ctime(&now);
-        file << "Äàòà ³ ÷àñ çàïèñó: " << dt << endl;
+        file << "Ð”Ð°Ñ‚Ð° Ñ– Ñ‡Ð°Ñ Ð·Ð°Ð¿Ð¸ÑÑƒ: " << dt << endl;
         file.close();
 
-        cout << "Äàí³ áóëî çàïèñàíî ó ôàéë input.txt\n\n";
+        cout << "Ð”Ð°Ð½Ñ– Ð±ÑƒÐ»Ð¾ Ð·Ð°Ð¿Ð¸ÑÐ°Ð½Ð¾ Ñƒ Ñ„Ð°Ð¹Ð» input.txt\n\n";
     }
 }
 
@@ -110,26 +110,26 @@ void task10_3()
 {
     ofstream file("input.txt", ios::app);
 
-    file << "Çàâäàííÿ 10.3\n";
+    file << "Ð—Ð°Ð²Ð´Ð°Ð½Ð½Ñ 10.3\n";
 
     int x, y, z;
-    cout << "Ââåä³òü x: ";
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ x: ";
     cin >> x;
-    cout << "Ââåä³òü y: ";
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ y: ";
     cin >> y;
-    cout << "Ââåä³òü z: ";
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ z: ";
     cin >> z;
 
-    file << "Ðåçóëüòàò ôóíêö³¿ s_calculation: " << s_calculation(x, y, z) << "." << endl;
+    file << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ Ñ„ÑƒÐ½ÐºÑ†Ñ–Ñ— s_calculation: " << s_calculation(x, y, z) << "." << endl;
 
-    // Ïåðåâ³ä b ó äâ³éêîâó ñèñòåìó
+    // ÐŸÐµÑ€ÐµÐ²Ñ–Ð´ b Ñƒ Ð´Ð²Ñ–Ð¹ÐºÐ¾Ð²Ñƒ ÑÐ¸ÑÑ‚ÐµÐ¼Ñƒ
     int b;
-    cout << "Ââåä³òü b: ";
+    cout << "Ð’Ð²ÐµÐ´Ñ–Ñ‚ÑŒ b: ";
     cin >> b;
 
-    file << "×èñëî " << b << " ó äâ³éêîâ³é ñèñòåì³: " << IntToBinaryString(b) << ".\n\n";
+    file << "Ð§Ð¸ÑÐ»Ð¾ " << b << " Ñƒ Ð´Ð²Ñ–Ð¹ÐºÐ¾Ð²Ñ–Ð¹ ÑÐ¸ÑÑ‚ÐµÐ¼Ñ–: " << IntToBinaryString(b) << ".\n\n";
 
     file.close();
 
-    cout << "Äàí³ áóëî çàïèñàíî ó ôàéë input.txt\n\n";
+    cout << "Ð”Ð°Ð½Ñ– Ð±ÑƒÐ»Ð¾ Ð·Ð°Ð¿Ð¸ÑÐ°Ð½Ð¾ Ñƒ Ñ„Ð°Ð¹Ð» input.txt\n\n";
 }

@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <Windows.h>
 #include "ModulesKalinichenko.h"
 using namespace std;
@@ -11,14 +11,14 @@ int main() {
 
     while (isRunning) {
         int choice;
-        cout << "Âèáåð³òü çàâäàííÿ àáî íàïèø³òü \"0\" äëÿ âèõîäó \nÇàâäàííÿ 10.";
+        cout << "Ð’Ð¸Ð±ÐµÑ€Ñ–Ñ‚ÑŒ Ð·Ð°Ð²Ð´Ð°Ð½Ð½Ñ Ð°Ð±Ð¾ Ð½Ð°Ð¿Ð¸ÑˆÑ–Ñ‚ÑŒ \"0\" Ð´Ð»Ñ Ð²Ð¸Ñ…Ð¾Ð´Ñƒ \nÐ—Ð°Ð²Ð´Ð°Ð½Ð½Ñ 10.";
         cin >> choice;
 
         if (choice == 1) task10_1();
         else if (choice == 2) task10_2();
         else if (choice == 3) task10_3();
 		else if (choice == 0) isRunning = false;
-        else cout << "Òàêîãî çàâäàííÿ íå ³ñíóº.\n\n";
+        else cout << "Ð¢Ð°ÐºÐ¾Ð³Ð¾ Ð·Ð°Ð²Ð´Ð°Ð½Ð½Ñ Ð½Ðµ Ñ–ÑÐ½ÑƒÑ”.\n\n";
     }
     return 0;
 }
