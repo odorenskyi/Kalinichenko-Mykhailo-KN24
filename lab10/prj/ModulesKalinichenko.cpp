@@ -66,11 +66,11 @@ void task10_1()
     outfile << "Установа/організація: ЦНТУ" << endl;
     outfile << "Місто: Кропивницький" << endl;
     outfile << "Країна: Україна" << endl;
-    outfile << "Рік виконання: 2025" << "\n\n";
+    outfile << "Рік розробки: 2025" << "\n\n";
     outfile << "У цьому файлі " << to_string(CountCharactersInFile(infile)) << " символів." << endl;
 
     // Перевірка наявності слів у файлі
-    string targetwords[] = { "файл", "робота", "завдання", "індивідуальний"};
+    string targetwords[] = { "програма", "модуль", "студент", "програміст"};
     for (const string& word : targetwords) {
         bool found = isContainsWord(infile, word);
         if (found) {
@@ -80,7 +80,7 @@ void task10_1()
         }
     }
 
-    cout << "Звіт було записано у файл output.txt\n\n";
+    cout << "Дані було записано у файл output.txt\n\n";
 }
 
 void task10_2()

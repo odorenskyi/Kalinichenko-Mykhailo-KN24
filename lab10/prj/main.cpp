@@ -5,8 +5,8 @@
 using namespace std;
 
 int main() {
-    SetConsoleOutputCP(1251);
-    SetConsoleCP(1251);
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
 
 	bool isRunning = true;
 
@@ -14,8 +14,8 @@ int main() {
         int choice;
         bool validInput = false;
         while (!validInput) {
-            cout << "Виберіть завдання або напишіть \"0\" для виходу \nЗавдання 10.";
-            cin >> choice;z
+            cout << u8"Виберіть завдання або напишіть \"0\" для виходу \nЗавдання 10.";
+            cin >> choice;
             if (cin.fail()) {
                 cin.clear();
                 cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
