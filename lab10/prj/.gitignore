@@ -1,0 +1,12 @@
+# Игнорировать все
+*
+
+!*.cpp
+!*.h
+
+!input.txt
+!output.txt
+
+!*.gitignore
+
+#!*.cbp

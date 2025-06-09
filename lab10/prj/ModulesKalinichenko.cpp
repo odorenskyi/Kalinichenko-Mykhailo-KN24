@@ -1,4 +1,4 @@
-﻿#include <fstream>
+#include <fstream>
 #include <iostream>
 #include <ctime>
 #include <string>
@@ -62,10 +62,10 @@ void task10_1()
 
     if (!outfile.is_open()) return;
 
-    outfile << "Звіт: лабораторна робота" << endl;
-    outfile << "ПІБ/група: Калініченко Михайло KN-24" << endl;
-    outfile << "Варіант: індивідуальний" << endl;
-    outfile << "Тема: файли" << endl;
+    outfile << "Автор: Калініченко Михайло" << endl;
+    outfile << "Установа/організація: ЦНТУ" << endl;
+    outfile << "Місто: Кропивницький" << endl;
+    outfile << "Країна: Україна" << endl;
     outfile << "Рік виконання: 2025" << "\n\n";
     outfile << "У цьому файлі " << to_string(CountCharactersInFile(infile)) << " символів." << endl;
 
@@ -90,19 +90,19 @@ void task10_2()
     if (file.is_open()) {
         file << "Завдання 10.2\n";
 
-        // Додаємо довільний текст
-        file << "Додаємо довільний текст у файл для перевірки 20 символів:\n";
-        file << "- перший рядок\n";
-        file << "- другий рядок\n";
-        file << "- третій рядок\n";
+        // Державні символи України згідно зі ст. 20 Конституції
+        file << "Державні символи України згідно зі статтею 20 Конституції України:\n";
+        file << "- Державний Прапор України\n";
+        file << "- Державний Герб України\n";
+        file << "- Державний Гімн України\n";
 
-        // Додаємо поточну дату і час
-        time_t now = time(0);
-        char* dt = ctime(&now);
-        file << "Дата і час запису: " << dt << endl;
+        // Записуємо поточну дату та час
+        time_t rawtime;
+        time(&rawtime);
+        file << "Дата дозапису файла: " << ctime(&rawtime) << endl;
         file.close();
 
-        cout << "Дані було записано у файл input.txt\n\n";
+        cout << "Дані успішно дозаписані у файл input.txt\n\n";
     }
 }
 
