@@ -25,6 +25,7 @@ int main() {
             }
         }
 
+
         if (choice == 1) task10_1();
         else if (choice == 2) task10_2();
         else if (choice == 3) task10_3();
